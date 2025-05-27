@@ -284,7 +284,7 @@ def load_llama_model():
         llm = Llama(
             model_path=model_path,
             n_ctx=2048, # Increased context window for longer prompts/responses
-            n_gpu_layers=-1, # Set to -1 to offload all layers to GPU if possible.
+            n_gpu_layers=0, # Set to -1 to offload all layers to GPU if possible.
                              # Set to 0 for CPU-only if no GPU or VRAM issues.
             verbose=False # Suppress llama.cpp verbose output
         )
